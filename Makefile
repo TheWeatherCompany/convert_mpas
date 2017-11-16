@@ -1,5 +1,5 @@
-FC = gfortran
-FFLAGS = -O2 -ffree-form -Wall -DHAVE_NF90_INQ_VARIDS
+FC = $(fortran_compiler)
+FFLAGS = $(fortran_flags)
 FCINCLUDES = $(shell nc-config --fflags)
 FCLIBS = $(shell nc-config --flibs)
 

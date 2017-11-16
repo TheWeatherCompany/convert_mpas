@@ -1,2 +1,6 @@
 # main executable
 convert_mpas
+plot*ncl
+exclude_fields
+include_fields
+latlon.nc

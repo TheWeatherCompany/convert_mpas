@@ -4,11 +4,13 @@
 # get Linux distribution 
 distribution=`uname -r`
 # for intel compilers ...
-export fortran_flags="-O2 -free -DHAVE_NF90_INQ_VARIDS"
+#export fortran_flags="-O2 -free -DHAVE_NF90_INQ_VARIDS"
+# for gnu compilers ...
+export fortran_flags="-O2 -ffree-form -Wall -DHAVE_NF90_INQ_VARIDS"
 
 if [[ $distribution == "3.0.101-0.46.1_1.0502.8871-cray_ari_s" ]]; then
 
-    module swap PrgEnv-cray PrgEnv-intel
+    module swap PrgEnv-cray PrgEnv-gnu
     module load cray-netcdf
     module load cray-parallel-netcdf
     module load cray-hdf5

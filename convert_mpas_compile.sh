@@ -8,7 +8,7 @@ distribution=`uname -r`
 # for gnu compilers ...
 export fortran_flags="-O2 -ffree-form -Wall -DHAVE_NF90_INQ_VARIDS"
 
-if [[ $distribution == "3.0.101-0.46.1_1.0502.8871-cray_ari_s" ]]; then
+if [[ $distribution = *"cray"* ]]; then
 
     module swap PrgEnv-cray PrgEnv-gnu
     module load cray-netcdf
